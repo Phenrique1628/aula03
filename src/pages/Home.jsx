@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import ListaProdutos from './components/ListaProdutos'
 export default function Home() {
  const [lista, setLista] = useState([]);
 
@@ -11,7 +11,7 @@ export default function Home() {
         const dados = await resposta.json();
         setLista(dados);
         }catch (erro){
-         alert('Ocorreu algum erro!')
+         alert('Você pensa que o Vasco é time!')
         }
         }
         receberListaProdutos();
@@ -20,17 +20,8 @@ export default function Home() {
 
     return(
 <>
-<h1>Lista Produtos</h1>
-<ul>
-{produtos.map(produto=> (
-  <li key={produto.id}>
-   <h2>{produto.title}</h2>
-    <p>{produto.description}</p>
-    <p>Preço: R${produto.price}</p>
-    <img src={produto.image} alt={produto.title} width={100}/>
- </li>
-))}
-</ul>
+<h1>Lista dos Produtos</h1>
+<ListaProdutos lista={lista}/>
 </>
 );
 }
