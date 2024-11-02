@@ -12,7 +12,7 @@ export default function Home() {
         const dados = await resposta.json();
         setLista(dados);
         }catch (erro){
-         alert('Você pensa que o Vasco é time!')
+         alert('Algo deu errado!')
         }
         }
         receberListaProdutos();
