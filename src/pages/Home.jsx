@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import ListaProdutos from './components/ListaProdutos'
+import ListaProdutos from './components/ListaProdutos';
+import styles from '../styles/Lista.module.css'
 export default function Home() {
  const [lista, setLista] = useState([]);
 
@@ -20,7 +21,7 @@ export default function Home() {
 
     return(
 <>
-<h1>Lista dos Produtos</h1>
+<h1 className={styles.titulo}>Lista dos Produtos</h1>
 <ListaProdutos lista={lista}/>
 </>
 );
