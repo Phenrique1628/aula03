@@ -38,9 +38,11 @@
 }
 
 .botao{
+    background-color: blueviolet;
+    color: rgb(255, 255, 255);
     margin: 10px;
-    border-radius: 2px white;
-    background-color: rgb(155, 157, 210);
+    border-radius: 2px rgb(155, 157, 210);
 }
+
 
 
