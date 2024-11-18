@@ -1,7 +1,11 @@
 import styles from '../../styles/Lista.module.css'
+import Loading from '../../notificacao/Loading'
 
 
 export default function Lista({lista}) {
+  if(lista.length === 0) {
+    return <Loading/>
+  }
 return(
 <>
 <ul className={styles.bloco}>
